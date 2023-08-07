@@ -42,7 +42,7 @@ const Feedback: NextPage<FeedbackProps> = (props) => {
         </h3>
         <p>Отвечаем в рабочее время (понедельник - пятница) 09:00-20:00 </p>
       </span>
-      <a href={"//wa.me/+971543204517"} className={styles.whatsappbtn}>
+      <a href={"//wa.me/+79115852552"} className={styles.whatsappbtn}>
         <img src="/ui/icons/whatsapp.svg" />
         Написать нам
       </a>

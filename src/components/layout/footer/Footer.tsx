@@ -65,9 +65,9 @@ const Footer: NextPage = () => {
     },
     {
       links: {
-        slug: "https://yandex.com.ge/maps/-/CXaqBfd",
+        slug: "https://yandex.com.ge/maps/-/C2eF6er",
         title:
-          'Ненецкий АО, г.Нарьян-Мар, ул.Ленина, д.6, оф.1 (ТЦ "Тиман"), вход с торца, 1 этаж',
+          'Ненецкий АО, г.Нарьян-Мар, ул.Полярная, 35б',
       },
     },
   ];
