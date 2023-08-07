@@ -1,0 +1,32 @@
+{
+  "name": "rubus.ts",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "contentful-typescript-codegen": "contentful-typescript-codegen --output contentful.d.ts"
+  },
+  "dependencies": {
+    "@contentful/rich-text-react-renderer": "^15.17.0",
+    "@types/node": "20.4.2",
+    "@types/react": "18.2.14",
+    "@types/react-dom": "18.2.7",
+    "contentful": "^10.3.6",
+    "contentful-management": "^10.39.2",
+    "hyphenopoly": "^5.2.0-beta.1",
+    "next": "^13.4.12",
+    "prettier": "^3.0.0",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "react-modal": "^3.16.1",
+    "sass": "^1.63.6",
+    "scss": "^0.2.4",
+    "typescript": "5.1.6"
+  },
+  "devDependencies": {
+    "contentful-typescript-codegen": "^3.4.0"
+  }
+}

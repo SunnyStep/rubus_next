@@ -1,0 +1,105 @@
+@import "@/styles/colors.scss";
+
+.card {
+    display: flex;
+    gap: 24px;
+    transition: all 0.3s ease-in-out;
+    height: 100%;
+
+    &:hover {
+        opacity: 0.85;
+    }
+
+    > img {
+        border-radius: 16px;
+        cursor: pointer;
+    }
+}
+
+.data {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    align-self: stretch;
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    align-self: stretch;
+    cursor: pointer;
+
+    em {
+        color: $green_800;
+        font-weight: 700;
+        font-style: normal;
+    }
+
+    .text {
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+        gap: 8px;
+        flex: 1 0 0;
+    }
+
+    .title {
+        display: flex;
+        align-items: start;
+
+        h3 {
+            width: 100%;
+            font-size: 24px;
+            font-weight: 700;
+        }
+
+        img {
+            width: 10px;
+            height: 10px;
+            opacity: 0.8;
+            margin: 8px;
+        }
+    }
+
+    p {
+        font-size: 16px;
+        font-weight: 500;
+        opacity: 0.8;
+    }
+}
+
+.tags {
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 8px 8px;
+
+    .tag {
+        display: flex;
+        padding: 4px 10px;
+        justify-content: center;
+        align-items: center;
+        border-radius: 16px;
+        font-weight: 600;
+        cursor: default;
+    }
+
+    .tag:nth-child(1) {
+        border: 1px solid #e9d7fe;
+        background: #f9f5ff;
+        color: #6941c6;
+    }
+
+    .tag:nth-child(2) {
+        border: 1px solid #c7d7fe;
+        background: #eef4ff;
+        color: #3538cd;
+    }
+
+    .tag:nth-child(3) {
+        border: 1px solid #fcceee;
+        background: #fdf2fa;
+        color: #c11574;
+    }
+}

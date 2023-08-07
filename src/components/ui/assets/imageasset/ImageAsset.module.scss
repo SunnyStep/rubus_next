@@ -1,0 +1,66 @@
+@import "@/styles/colors.scss";
+
+.asset {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin: 16px 0;
+
+    .image {
+        width: 100%;
+        cursor: pointer;
+    }
+
+    .zoomedimage {
+        position: fixed;
+        object-fit: cover;
+        cursor: default;
+        width: 80%;
+        height: 80%;
+
+        @media screen and (max-width: 880px) {
+            width: 90%;
+            height: 30%;
+        }
+        z-index: 50;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .back {
+        position: fixed;
+        width: 200vw;
+        height: 200vh;
+        left: 0;
+        top: 0;
+        z-index: 40;
+        backdrop-filter: blur(4px);
+        background-color: rgba(0, 0, 0, 0.7);
+    }
+
+    .cross {
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 20px;
+        height: 20px;
+        z-index: 45;
+        margin: 24px;
+        cursor: pointer;
+        transition: opacity 0.3s ease-in-out;
+
+        &:hover {
+            opacity: 0.7;
+        }
+    }
+
+    p {
+        color: $gray_500;
+        font-size: 16px;
+        @media screen and (max-width: 880px) {
+            font-size: 14px;
+        }
+        font-weight: 600;
+    }
+}

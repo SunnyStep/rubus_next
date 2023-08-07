@@ -1,0 +1,32 @@
+@import "@/styles/colors.scss";
+
+.column {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    gap: 16px;
+
+    h4 {
+        color: $gray_500;
+        font-size: 15px;
+        font-weight: 600;
+    }
+
+    .links {
+        display: flex;
+        flex-direction: column;
+        color: $gray_600;
+        font-weight: 700;
+        font-size: 16px;
+        gap: 12px;
+        align-self: stretch;
+
+        a {
+            transition: color 0.3s ease-in-out;
+
+            &:hover {
+                color: $gray_400;
+            }
+        }
+    }
+}

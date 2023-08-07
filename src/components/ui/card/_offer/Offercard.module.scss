@@ -1,0 +1,85 @@
+@import "@/styles/colors.scss";
+
+.card {
+    display: flex;
+    width: 100%;
+    padding: 16px;
+    height: fit-content;
+    align-items: stretch;
+    justify-content: stretch;
+    gap: 24px;
+    flex-shrink: 0;
+    background: $gray_50;
+    transition: all 0.3s ease-in-out;
+
+    &:hover {
+        opacity: 0.85;
+    }
+}
+
+.cover {
+    border-radius: 6px;
+    flex-shrink: 0;
+    align-self: stretch;
+    object-fit: cover;
+    cursor: pointer;
+}
+
+.data {
+    display: flex;
+    padding: 6px 0;
+    flex-direction: column;
+    height: 100%;
+    gap: 24px;
+    flex: 1 0 0;
+    cursor: pointer;
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    align-self: stretch;
+
+    .title {
+        display: flex;
+        align-items: start;
+
+        h3 {
+            width: 100%;
+            font-size: 24px;
+            font-weight: 700;
+        }
+
+        img {
+            width: 10px;
+            height: 10px;
+            opacity: 0.8;
+            margin: 8px;
+        }
+    }
+
+    p {
+        color: rgba(0, 0, 0, 0.8);
+        font-size: 16px;
+        font-weight: 500;
+    }
+
+    em {
+        color: $blue_800;
+        font-weight: 700;
+        font-style: normal;
+        @media screen and (max-width: 1024px) {
+            font-size: 14px;
+        }
+    }
+}
+
+.more {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    color: $blue_950;
+    font-size: 14px;
+    font-weight: 600;
+}

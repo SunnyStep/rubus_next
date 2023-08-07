@@ -1,0 +1,28 @@
+@import "@/styles/colors.scss";
+
+.heading {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 32px;
+
+    h1 {
+        color: $gray_900;
+        font-size: 36px;
+        font-weight: 700;
+    }
+
+    p {
+        color: $gray_600;
+        font-size: 18px;
+        font-weight: 600;
+    }
+
+    @media screen and (max-width: 880px) {
+        h1 {
+            font-size: 32px;
+        }
+        p {
+            font-size: 16px;
+        }
+    }
+}

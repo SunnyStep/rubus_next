@@ -1,0 +1,23 @@
+@import "@/styles/colors.scss";
+
+.routebar {
+    display: flex;
+    width: 100%;
+    padding: 12px 20px;
+    margin-bottom: 24px;
+    align-items: center;
+    gap: 10px;
+    flex: 1 0 0;
+    border-radius: 8px;
+    background: $green_50;
+
+    a {
+        color: $green_900;
+        font-size: 16px;
+        font-weight: 600;
+        transition: all 0.3s ease-in-out;
+        &:hover {
+            color: $green_600;
+        }
+    }
+}

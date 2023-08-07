@@ -1,0 +1,119 @@
+@import "@/styles/colors.scss";
+
+.about {
+    display: flex;
+    gap: 32px;
+    width: 100%;
+    margin-bottom: 64px;
+}
+
+.data {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    width: 100%;
+    min-width: min(100%, calc(558px));
+
+    .stats,
+    .feedbacks {
+        display: flex;
+        padding: 24px;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+        align-self: stretch;
+        background: $gray_50;
+
+        h3 {
+            font-size: 32px;
+            font-weight: 700;
+        }
+
+        @media screen and (max-width: 668px) {
+            h3 {
+                display: none;
+            }
+        }
+    }
+
+    .stats {
+        width: 100%;
+
+        .statsrow {
+            display: flex;
+            gap: 10px;
+            width: 100%;
+            flex-wrap: wrap;
+
+            .statsblock {
+                display: flex;
+                width: 120px;
+                @media screen and (max-width: 668px) {
+                    width: 100%;
+                    padding: 24px 16px;
+                }
+                padding: 12px 4px;
+                flex-direction: column;
+                align-items: center;
+                border-radius: 8px;
+                background: $purple_50;
+
+                h4 {
+                    color: $purple_500;
+                    text-align: center;
+                    font-size: 42px;
+                    font-weight: 800;
+                }
+
+                p {
+                    text-align: center;
+                    font-size: 14px;
+                    font-weight: 700;
+                }
+            }
+        }
+    }
+
+    .feedbacks {
+        .feedbackcol {
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+
+        .feedback {
+            display: flex;
+            width: 100%;
+            max-width: 510px;
+            padding: 12px;
+            flex-direction: column;
+            gap: 12px;
+            background: $purple_50;
+
+            article {
+                font-size: 14px;
+                font-weight: 600;
+            }
+
+            em {
+                color: rgba(0, 0, 0, 0.6);
+                font-size: 14px;
+                font-style: normal;
+                font-weight: 700;
+            }
+        }
+    }
+}
+
+.image {
+    width: 100%;
+    background: url("/example.png");
+    object-fit: cover;
+    background-position: center;
+    pointer-events: none;
+    user-select: none;
+
+    @media screen and (max-width: 668px) {
+        display: none;
+    }
+}

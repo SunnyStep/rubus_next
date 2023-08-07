@@ -1,0 +1,56 @@
+@import "@/styles/colors.scss";
+
+.space {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.route {
+    display: inline-flex;
+    width: 100%;
+    align-items: center;
+    font-size: 16px;
+    font-weight: 600;
+    color: $gray_900;
+    padding: 10px 12px;
+}
+
+.link {
+    justify-content: space-between;
+    display: flex;
+    align-items: center;
+    background: $gray_100;
+
+    img {
+        width: 10px;
+        height: 8px;
+        opacity: 0.5;
+        padding: 12px;
+        box-sizing: content-box;
+        transition: all 0.3s ease-in-out;
+    }
+}
+
+.dropdown {
+    width: 100%;
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+
+    .dropline {
+        padding: 10px 12px;
+        background: #f9fafb;
+        width: 100%;
+
+        a {
+            color: $gray_700;
+            font-weight: 500;
+        }
+    }
+}
+
+.show {
+    display: inline-flex;
+    opacity: 1;
+}

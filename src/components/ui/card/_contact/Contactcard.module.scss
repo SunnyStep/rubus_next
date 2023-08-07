@@ -1,0 +1,69 @@
+@import "@/styles/colors.scss";
+
+.card {
+    width: 100%;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    flex: 1 0 0;
+    align-self: stretch;
+    background: $gray_50;
+
+    &:hover {
+        .icon {
+            background: $purple_500;
+        }
+    }
+
+    .icon {
+        display: flex;
+        padding: 13px;
+        justify-content: center;
+        align-items: center;
+        border-radius: 10px;
+        background: $purple_600;
+        height: 45px;
+        transition: all 0.3s ease-in-out;
+        width: 45px;
+
+        img {
+            max-height: 20px;
+        }
+    }
+
+    .text {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        align-self: stretch;
+        width: 100%;
+
+        h3 {
+            color: $gray_900;
+            font-size: 20px;
+            font-weight: 700;
+            width: 100%;
+        }
+
+        p {
+            color: $gray_600;
+            font-size: 16px;
+            font-weight: 500;
+            width: 100%;
+        }
+    }
+
+    .data {
+        width: 100%;
+        color: $purple_700;
+        font-size: 16px;
+        font-weight: 800;
+        text-decoration: none;
+        transition: all 0.1s ease-in-out;
+
+        &:hover {
+            color: $purple_500;
+        }
+    }
+}

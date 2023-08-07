@@ -1,0 +1,51 @@
+@import "@/styles/colors.scss";
+
+.hero {
+    display: flex;
+    width: 100%;
+    padding: 68px 0px;
+    flex-direction: column;
+    gap: 12px;
+
+    @media screen and (max-width: 880px) {
+        padding: 32px 0px;
+        em {
+            font-size: 14px;
+        }
+    }
+
+    em {
+        color: $green_700;
+        font-style: normal;
+        font-weight: 700;
+    }
+}
+
+.headings {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    align-self: stretch;
+
+    h1 {
+        color: $gray_900;
+        font-size: 48px;
+        font-weight: 700;
+        letter-spacing: -0.96px;
+    }
+
+    p {
+        color: rgba(0, 0, 0, 0.7);
+        font-size: 20px;
+        font-weight: 500;
+    }
+
+    @media screen and (max-width: 880px) {
+        h1 {
+            font-size: 36px;
+        }
+        p {
+            font-size: 16px;
+        }
+    }
+}

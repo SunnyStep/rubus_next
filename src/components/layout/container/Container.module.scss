@@ -1,0 +1,21 @@
+.container {
+    display: flex;
+    flex-direction: column;
+}
+
+._1024 {
+    width: 100vw;
+    max-width: 1024px;
+    @media screen and (max-width: 1024px) {
+        padding: 0 24px;
+    }
+}
+
+._800 {
+    width: 100%;
+    max-width: 800px;
+    @media screen and (max-width: 848px) {
+        padding: 0 24px;
+    }
+    position: relative;
+}

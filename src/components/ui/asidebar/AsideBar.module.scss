@@ -1,0 +1,33 @@
+@import "@/styles/colors.scss";
+
+.aside {
+    @media screen and (max-width: 1440px) {
+        display: none;
+    }
+
+    position: absolute;
+    background-color: white;
+    display: flex;
+    z-index: 10;
+    border-radius: 16px;
+    padding-bottom: 24px;
+    flex-direction: column;
+    left: calc(100% + 32px);
+    width: 288px;
+    gap: 10px;
+
+    a {
+        font-size: 16px;
+        color: $green_900;
+        font-weight: 600;
+        transition: all 0.3s ease-in-out;
+
+        &:hover {
+            color: $green_600;
+        }
+    }
+
+    .active {
+        color: $gray_400;
+    }
+}
