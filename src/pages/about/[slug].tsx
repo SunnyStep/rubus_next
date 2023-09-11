@@ -40,6 +40,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
   const paths = rawpaths.data.map((path: any) => ({
     params: { slug: path.params.slug as string },
   }));
+  console.log(paths);
 
   return {
     paths,
