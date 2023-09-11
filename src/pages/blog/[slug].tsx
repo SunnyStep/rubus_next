@@ -4,7 +4,7 @@ import { getBlog, getBlogs, getPaths } from "@/contentful/nodes";
 import { NextPage } from "next";
 import Container_800 from "@/components/layout/container/Container_800";
 import Feedback from "@/components/ui/feedback/Feedback";
-import { GetStaticPaths, GetStaticProps } from "next";
+import { GetStaticPaths, GetStaticProps, GetServerSideProps } from "next";
 import AsideBar from "@/components/ui/asidebar/AsideBar";
 import Article from "@/components/screens/article/Article";
 import RouteBar from "@/components/ui/routebar/RouteBar";
@@ -35,27 +35,42 @@ type BlogProps = {
   slug: string;
 };
 
-export const getStaticPaths: GetStaticPaths = async () => {
-  const rawpaths = await getPaths("blog");
-  const paths = rawpaths.data.map((path: any) => ({
-    params: { slug: path.params.slug as string },
-  }));
-  console.log(paths);
+// export const getStaticPaths: GetStaticPaths = async () => {
+//   const rawpaths = await getPaths("blog");
+//   const paths = rawpaths.data.map((path: any) => ({
+//     params: { slug: path.params.slug as string },
+//   }));
 
-  return {
-    paths,
-    fallback: false,
-  };
-};
+//   return {
+//     paths,
+//     fallback: false,
+//   };
+// };
 
-export const getStaticProps: GetStaticProps = async ({ params }) => {
+// export const getStaticProps: GetStaticProps = async ({ params }) => {
+//   const slug = params?.slug as string;
+//   const blog = await getBlog(slug);
+//   const blogs = await getBlogs();
+
+//   return {
+//     props: { blog, blogs, slug },
+//     revalidate: 60,
+//   };
+// };
+
+export const getServerSideProps: GetServerSideProps = async ({ params }) => {
   const slug = params?.slug as string;
   const blog = await getBlog(slug);
   const blogs = await getBlogs();
 
+  if (blog.data.length === 0) {
+    return {
+      notFound: true,
+    };
+  }
+
   return {
     props: { blog, blogs, slug },
-    revalidate: 60,
   };
 };
 

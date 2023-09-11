@@ -4,7 +4,7 @@ import { getPaths, getOffers, getOffer } from "@/contentful/nodes";
 import { NextPage } from "next";
 import Container_800 from "@/components/layout/container/Container_800";
 import Feedback from "@/components/ui/feedback/Feedback";
-import { GetStaticPaths, GetStaticProps } from "next";
+import { GetStaticPaths, GetStaticProps, GetServerSideProps } from "next";
 import AsideBar from "@/components/ui/asidebar/AsideBar";
 import Article from "@/components/screens/article/Article";
 import RouteBar from "@/components/ui/routebar/RouteBar";
@@ -35,26 +35,42 @@ type OfferProps = {
   slug: string;
 };
 
-export const getStaticPaths: GetStaticPaths = async () => {
-  const rawpaths = await getPaths("offer");
-  const paths = rawpaths.data.map((path: any) => ({
-    params: { slug: path.params.slug as string },
-  }));
+// export const getStaticPaths: GetStaticPaths = async () => {
+//   const rawpaths = await getPaths("offer");
+//   const paths = rawpaths.data.map((path: any) => ({
+//     params: { slug: path.params.slug as string },
+//   }));
 
-  return {
-    paths,
-    fallback: false,
-  };
-};
+//   return {
+//     paths,
+//     fallback: false,
+//   };
+// };
 
-export const getStaticProps: GetStaticProps = async ({ params }) => {
+// export const getStaticProps: GetStaticProps = async ({ params }) => {
+//   const slug = params?.slug as string;
+//   const offer = await getOffer(slug);
+//   const offers = await getOffers();
+
+//   return {
+//     props: { offer, offers, slug },
+//     revalidate: 60,
+//   };
+// };
+
+export const getServerSideProps: GetServerSideProps = async ({ params }) => {
   const slug = params?.slug as string;
   const offer = await getOffer(slug);
   const offers = await getOffers();
 
+  if (offer.data.length === 0) {
+    return {
+      notFound: true,
+    };
+  }
+
   return {
     props: { offer, offers, slug },
-    revalidate: 60,
   };
 };
 
